@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -49,7 +48,7 @@ public class FilmAdapter extends BaseAdapter {
          view = layoutInflater.inflate(R.layout.row_film,null);
 
          //annhXa
-        ImageView poster = view.findViewById(R.id.MoviewPoster);
+        ImageView poster = view.findViewById(R.id.PosterFragemnet);
         TextView title = view.findViewById(R.id.Movie_title);
         TextView actor = view.findViewById(R.id.Movie_Actor);
         TextView genres = view.findViewById(R.id.Movie_Gen);
@@ -58,10 +57,10 @@ public class FilmAdapter extends BaseAdapter {
         //gan gia tri
         MovieInfo movieInfo= movie.get(position);
         poster.setImageResource(movieInfo.getPoster());
-        title.setText(movieInfo.getTitle());
-        actor.setText(movieInfo.getActors());
-        genres.setText(movieInfo.getGenre());
-        rating.setText(String.valueOf(movieInfo.getRating()));
+        title.setText("Title:"+movieInfo.getTitle());
+        actor.setText("Actors:"+movieInfo.getActors());
+        genres.setText("Genre: "+movieInfo.getGenre());
+        rating.setText("Rating: "+String.valueOf(movieInfo.getRating()));
 
         return view;
     }

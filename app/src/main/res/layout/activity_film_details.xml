@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+
+        <ImageView
+            android:id="@+id/PosterFragemnet"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/movie_theatres" />
+
+        <EditText
+            android:id="@+id/Movie_title_Fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:text="Title"
+            android:textColor="#88191ea1"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/Movie_Actor_Fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Movie_title_Fragment"
+            android:layout_marginTop="23dp"
+            android:layout_toEndOf="@+id/PosterFragemnet"
+            android:ems="10"
+            android:text="Actors: "
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/Movie_Gen_Fragemnet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ratingBar"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/PosterFragemnet"
+            android:ems="10"
+            android:text="Generas: "
+            android:textSize="10sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/PosterFragemnet"
+            android:numStars="4" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:textSize="20sp"
+            android:hint="Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/entries"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="say Something"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+        <Button
+            android:id="@+id/addEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="24dp"
+            android:text="add" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -4,9 +4,10 @@
 
     <item
         android:id="@+id/action_one"
+        android:icon="@drawable/adding_icon_menu"
         android:orderInCategory="101"
         app:showAsAction="always"
-        android:title="One" />
+        />
 
     <item
         android:id="@+id/action_two"
@@ -24,7 +25,7 @@
     <item
         android:id="@+id/action_four"
         android:orderInCategory="401"
-        app:showAsAction="never"
+        app:showAsAction="always"
         android:title="About"/>
 
 </menu>
