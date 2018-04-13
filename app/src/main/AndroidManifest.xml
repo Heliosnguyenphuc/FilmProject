@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Film_details_Fragment"></activity>
+        <activity android:name=".Film_details_Fragment" />
+        <activity android:name=".Film_Container"></activity>
     </application>
 
 </manifest>

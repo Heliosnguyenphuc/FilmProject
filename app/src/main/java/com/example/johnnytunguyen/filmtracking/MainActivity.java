@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -46,6 +48,17 @@ public class MainActivity extends AppCompatActivity {
         //tao anhXa
         adapter = new FilmAdapter(this,arrMovie);
         lvFilm.setAdapter(adapter);
+        lvFilm.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getBaseContext(), String.format("This is item :%s", arrMovie.get(position).getTitle()),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getBaseContext(),Film_Container.class);
+                startActivity(intent);
+
+            }
+        });
 
 
     }
@@ -78,8 +91,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void databaseWriteRoutine() {
 
-        
+
     }
+
+
+    // tao onclick on List view
+
 
     private void Anhxa(){
 

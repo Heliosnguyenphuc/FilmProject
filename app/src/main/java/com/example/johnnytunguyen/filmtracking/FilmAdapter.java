@@ -48,7 +48,7 @@ public class FilmAdapter extends BaseAdapter {
          view = layoutInflater.inflate(R.layout.row_film,null);
 
          //annhXa
-        ImageView poster = view.findViewById(R.id.PosterFragemnet);
+        ImageView poster = view.findViewById(R.id.PosterImg);
         TextView title = view.findViewById(R.id.Movie_title);
         TextView actor = view.findViewById(R.id.Movie_Actor);
         TextView genres = view.findViewById(R.id.Movie_Gen);
